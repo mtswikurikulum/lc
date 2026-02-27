@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1 Chinese Grammar Essentials – All 40 Points</title>
+<style>
+:root {
+  --red:#C0392B; --darkred:#7B241C; --gold:#C9A84C;
+  --lightred:#FADBD8; --cream:#FDF6EC; --ink:#1A1A2E;
+  --gray:#5D6D7E; --lightgray:#F4F6F7; --white:#fff; --border:#E8D5C4;
+  --cn:'PingFang SC','Microsoft YaHei','SimHei','STSong',serif;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:'Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);line-height:1.75;}
+
+/* SIDEBAR */
+.sb{position:fixed;top:0;left:0;width:280px;height:100vh;background:var(--ink);overflow-y:auto;z-index:100;padding-bottom:3rem;box-shadow:4px 0 20px rgba(0,0,0,.35);}
+.sb::-webkit-scrollbar{width:4px;}.sb::-webkit-scrollbar-thumb{background:var(--red);}
+.sb-logo{background:var(--red);padding:1.3rem;text-align:center;border-bottom:3px solid var(--gold);}
+.sb-logo .cn{font-family:var(--cn);font-size:2.2rem;color:var(--white);display:block;letter-spacing:.1em;}
+.sb-logo .lbl{font-size:.58rem;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;margin-top:.2rem;}
+.nav-sec{border-bottom:1px solid rgba(255,255,255,.07);}
+.nav-ch{display:block;padding:.55rem 1.3rem;color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+.nav-ch:hover{background:rgba(255,255,255,.06);}
+.nav-pt{display:block;padding:.25rem 1.3rem .25rem 2rem;color:rgba(255,255,255,.55);font-size:.73rem;cursor:pointer;transition:color .15s,background .15s,border-color .15s;border-left:2px solid transparent;}
+.nav-pt:hover,.nav-pt.active{color:var(--white);background:rgba(255,255,255,.05);border-left-color:var(--red);}
+
+/* MAIN */
+.main{margin-left:280px;min-height:100vh;}
+
+/* COVER */
+.cover{background:linear-gradient(145deg,var(--darkred),var(--red) 55%,#E74C3C);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 3rem;position:relative;overflow:hidden;}
+.cover::before{content:'语法';position:absolute;font-family:var(--cn);font-size:26rem;color:rgba(255,255,255,.04);right:-4rem;bottom:-5rem;line-height:1;pointer-events:none;user-select:none;}
+.cover-badge{background:var(--gold);color:var(--ink);font-size:.66rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;padding:.38rem 1.1rem;border-radius:2px;margin-bottom:1.8rem;}
+.cover h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,5rem);font-weight:900;color:var(--white);line-height:1.05;margin-bottom:.8rem;}
+.cover h1 span{color:var(--gold);}
+.cover-cn{font-family:var(--cn);font-size:2.4rem;color:rgba(255,255,255,.42);letter-spacing:.3em;margin-bottom:1.8rem;}
+.cover-desc{max-width:500px;color:rgba(255,255,255,.72);font-size:.96rem;line-height:1.7;margin-bottom:2.4rem;}
+.cover-stats{display:flex;gap:2.8rem;color:rgba(255,255,255,.9);}
+.cover-stat strong{display:block;font-family:var(--serif);font-size:2rem;color:var(--gold);line-height:1;}
+.cover-stat span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7;}
+.cover-div{width:70px;height:3px;background:var(--gold);margin:1.8rem auto;}
+
+/* CHAPTER HEADER */
+.ch-hd{background:var(--ink);padding:2.5rem 3rem;position:relative;overflow:hidden;}
+.ch-hd::after{content:attr(data-cn);position:absolute;right:2rem;top:50%;transform:translateY(-50%);font-family:var(--cn);font-size:6rem;color:rgba(255,255,255,.05);pointer-events:none;}
+.ch-num{font-size:.66rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem;}
+.ch-title{font-family:var(--serif);font-size:2rem;color:var(--white);font-weight:700;line-height:1.2;}
+.ch-sub{color:rgba(255,255,255,.46);font-size:.9rem;margin-top:.4rem;}
+.ch-line{width:44px;height:3px;background:var(--red);margin-top:.9rem;}
+
+/* SECTION DIVIDER within chapter */
+.sec-div{background:rgba(201,168,76,.12);padding:.5rem 3rem;border-left:4px solid var(--gold);margin:0;}
+.sec-div span{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+
+/* GRAMMAR POINT */
+.gp{background:var(--white);border-bottom:1px solid var(--border);padding:2.2rem 3rem;}
+.gp:nth-child(even){background:#FAFAFA;}
+.gp-num{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red);margin-bottom:.32rem;}
+.gp-title{font-family:var(--serif);font-size:1.42rem;font-weight:700;color:var(--ink);margin-bottom:1rem;padding-bottom:.65rem;border-bottom:2px solid var(--lightred);}
+.gp-hero{display:flex;align-items:baseline;gap:1.3rem;margin-bottom:.9rem;flex-wrap:wrap;}
+.gp-cn{font-family:var(--cn);font-size:1.9rem;color:var(--red);font-weight:700;line-height:1.3;}
+.gp-py{font-style:italic;font-size:.95rem;color:var(--gray);}
+.formula{background:var(--lightred);border-left:4px solid var(--red);border-radius:0 5px 5px 0;padding:.65rem 1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem;}
+.formula-lbl{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);white-space:nowrap;}
+.formula-txt{font-family:var(--serif);font-size:.94rem;color:var(--darkred);font-weight:700;}
+.gp-exp{color:var(--ink);font-size:.94rem;line-height:1.8;margin-bottom:1.3rem;}
+.ex-lbl{font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gray);margin-bottom:.65rem;}
+.ex-grid{display:grid;gap:.5rem;margin-bottom:1rem;}
+.ex-card{background:var(--lightgray);border-radius:6px;padding:.75rem 1rem;border-left:3px solid transparent;transition:border-color .2s,transform .15s;}
+.ex-card:hover{border-left-color:var(--red);transform:translateX(3px);}
+.ex-cn{font-family:var(--cn);font-size:1.15rem;color:var(--ink);font-weight:700;line-height:1.4;}
+.ex-py{font-style:italic;font-size:.79rem;color:var(--gray);margin:.08rem 0;}
+.ex-en{font-size:.84rem;color:#444;}
+.note{background:#FFFBEA;border:1px solid #FFE082;border-radius:5px;padding:.65rem .95rem;font-size:.84rem;color:#6D4C00;display:flex;gap:.55rem;align-items:flex-start;}
+.ni{flex-shrink:0;}
+
+/* REFERENCE */
+.ref-sec{background:var(--white);padding:3rem;}
+.ref-title{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--ink);margin-bottom:.3rem;}
+.ref-sub{color:var(--gray);font-size:.86rem;margin-bottom:1.6rem;}
+table.ref{width:100%;border-collapse:collapse;font-size:.88rem;}
+table.ref thead tr{background:var(--ink);color:var(--white);}
+table.ref thead th{padding:.8rem 1rem;text-align:left;font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;}
+table.ref tbody tr:nth-child(even){background:var(--lightgray);}
+table.ref tbody tr:hover{background:var(--lightred);}
+table.ref td{padding:.58rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle;}
+.td-cn{font-family:var(--cn);font-size:1.3rem;color:var(--red);font-weight:700;white-space:nowrap;}
+.td-py{font-style:italic;color:var(--gray);white-space:nowrap;}
+
+/* BACK */
+.back{background:var(--ink);padding:4rem 3rem;text-align:center;}
+.back h2{font-family:var(--serif);font-size:1.8rem;color:var(--white);margin-bottom:.9rem;}
+.back p{color:rgba(255,255,255,.55);max-width:480px;margin:0 auto 1rem;font-size:.92rem;line-height:1.8;}
+.back-credit{margin-top:2rem;font-size:.7rem;color:rgba(255,255,255,.26);}
+
+/* PROGRESS + SCROLL TOP */
+.prog{position:fixed;top:0;left:280px;right:0;height:3px;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:200;}
+.stbtn{position:fixed;bottom:1.8rem;right:1.8rem;width:40px;height:40px;background:var(--red);color:var(--white);border:none;border-radius:50%;font-size:1rem;cursor:pointer;opacity:0;transition:opacity .3s;z-index:300;display:flex;align-items:center;justify-content:center;}
+.stbtn.show{opacity:1;}
+@media(max-width:800px){.sb{display:none;}.main{margin-left:0;}.prog{left:0;}.gp,.ch-hd{padding:1.5rem;}}
+</style>
+</head>
+<body>
+<div class="prog" id="prog"></div>
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<nav class="sb">
+  <div class="sb-logo">
+    <span class="cn">语法</span>
+    <div class="lbl">A1 Grammar · All 40 Points</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('cover')">📖 Cover</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch1')">Ch 1 · Adverbs</div>
+    <div class="nav-pt" onclick="goTo('gp1-1')">没 — Negation of 有</div>
+    <div class="nav-pt" onclick="goTo('gp1-2')">不 — Standard negation</div>
+    <div class="nav-pt" onclick="goTo('gp1-3')">都 — "All" adverb</div>
+    <div class="nav-pt" onclick="goTo('gp1-4')">也 — "Also" adverb</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch2')">Ch 2 · Conjunctions</div>
+    <div class="nav-pt" onclick="goTo('gp2-1')">和 — Expressing "and"</div>
+    <div class="nav-pt" onclick="goTo('gp2-2')">还是 — Offering choices</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch3')">Ch 3 · Numbers</div>
+    <div class="nav-pt" onclick="goTo('gp3-1')">岁 — Age</div>
+    <div class="nav-pt" onclick="goTo('gp3-2')">个 — Measure word</div>
+    <div class="nav-pt" onclick="goTo('gp3-3')">Structure of dates</div>
+    <div class="nav-pt" onclick="goTo('gp3-4')">Days of the week</div>
+    <div class="nav-pt" onclick="goTo('gp3-5')">Structure of numbers</div>
+    <div class="nav-pt" onclick="goTo('gp3-6')">Structure of times</div>
+    <div class="nav-pt" onclick="goTo('gp3-7')">二 vs 两</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch4')">Ch 4 · Particles</div>
+    <div class="nav-pt" onclick="goTo('gp4-1')">Close possession without 的</div>
+    <div class="nav-pt" onclick="goTo('gp4-2')">的 — Possession</div>
+    <div class="nav-pt" onclick="goTo('gp4-3')">呢 — Questions</div>
+    <div class="nav-pt" onclick="goTo('gp4-4')">吧 — Suggestions</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch5')">Ch 5 · Verbs</div>
+    <div class="nav-pt" onclick="goTo('gp5-1')">在 — Existence in a place</div>
+    <div class="nav-pt" onclick="goTo('gp5-2')">有 — Existence</div>
+    <div class="nav-pt" onclick="goTo('gp5-3')">有 — Possession</div>
+    <div class="nav-pt" onclick="goTo('gp5-4')">叫 — Using the verb</div>
+    <div class="nav-pt" onclick="goTo('gp5-5')">去 — Using the verb</div>
+    <div class="nav-pt" onclick="goTo('gp5-6')">姓 — Using the verb</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch6')">Ch 6 · Auxiliary Verbs</div>
+    <div class="nav-pt" onclick="goTo('gp6-1')">能 — Ability / Possibility</div>
+    <div class="nav-pt" onclick="goTo('gp6-2')">会 — Learned skill</div>
+    <div class="nav-pt" onclick="goTo('gp6-3')">要 — Be going to</div>
+    <div class="nav-pt" onclick="goTo('gp6-4')">可以 — Permission</div>
+    <div class="nav-pt" onclick="goTo('gp6-5')">要 — Wanting to do</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch7')">Ch 7 · Verb Phrases</div>
+    <div class="nav-pt" onclick="goTo('gp7-1')">怎么 — How to do</div>
+    <div class="nav-pt" onclick="goTo('gp7-2')">没有 — Negate past actions</div>
+    <div class="nav-pt" onclick="goTo('gp7-3')">不要 — Negative commands</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch8')">Ch 8 · Structures (Basics)</div>
+    <div class="nav-pt" onclick="goTo('gp8-1')">Basic sentence order</div>
+    <div class="nav-pt" onclick="goTo('gp8-2')">是 — Connecting nouns</div>
+    <div class="nav-pt" onclick="goTo('gp8-3')">太…了 — Excessively</div>
+    <div class="nav-pt" onclick="goTo('gp8-4')">Noun + 很 + Adj. sentences</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('ch9')">Ch 9 · Question Forms</div>
+    <div class="nav-pt" onclick="goTo('gp9-1')">Affirmative-negative (V不V)</div>
+    <div class="nav-pt" onclick="goTo('gp9-2')">Placement of question words</div>
+    <div class="nav-pt" onclick="goTo('gp9-3')">Tag questions with 不</div>
+    <div class="nav-pt" onclick="goTo('gp9-4')">Tag questions with 吗</div>
+    <div class="nav-pt" onclick="goTo('gp9-5')">Yes/No questions with 吗</div>
+  </div>
+
+  <div class="nav-sec">
+    <div class="nav-ch" onclick="goTo('reference')">📋 Quick Reference</div>
+  </div>
+</nav>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="main">
+
+<!-- COVER -->
+<section class="cover" id="cover">
+  <div class="cover-badge">Mandarin Chinese · HSK 1–2 · Beginner</div>
+  <h1>A1 Grammar<br><span>Essentials</span></h1>
+  <div class="cover-cn">中文语法入门</div>
+  <div class="cover-div"></div>
+  <p class="cover-desc">The complete beginner's reference covering all 40 official A1-level Mandarin grammar points — every structure from the Chinese Grammar Wiki, with formulas, explanations, and example sentences.</p>
+  <div class="cover-stats">
+    <div class="cover-stat"><strong>40</strong><span>Grammar Points</span></div>
+    <div class="cover-stat"><strong>9</strong><span>Chapters</span></div>
+    <div class="cover-stat"><strong>160+</strong><span>Examples</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 1 · ADVERBS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch1" data-cn="副">
+  <div class="ch-num">Chapter 1 · Adverbs</div>
+  <div class="ch-title">Adverbs</div>
+  <div class="ch-sub">Words that modify verbs and adjectives</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 1.1 没 negation of 有 -->
+<div class="gp" id="gp1-1">
+  <div class="gp-num">1.1</div>
+  <div class="gp-title">Negation of "you" with "mei" — 没 + 有</div>
+  <div class="gp-hero"><div class="gp-cn">没有</div><div class="gp-py">méiyǒu</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">没 + 有 (+ Object)</span></div>
+  <p class="gp-exp">没 (méi) is used specifically to negate 有 (yǒu — to have). You cannot use 不有 — it is always 没有. In casual speech, 有 is often dropped and just 没 is used alone. This is one of the most important negation patterns at A1 level.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我没有钱。</div><div class="ex-py">Wǒ méiyǒu qián.</div><div class="ex-en">I don't have money.</div></div>
+    <div class="ex-card"><div class="ex-cn">他没有时间。</div><div class="ex-py">Tā méiyǒu shíjiān.</div><div class="ex-en">He doesn't have time.</div></div>
+    <div class="ex-card"><div class="ex-cn">我没有哥哥。</div><div class="ex-py">Wǒ méiyǒu gēge.</div><div class="ex-en">I don't have an older brother.</div></div>
+    <div class="ex-card"><div class="ex-cn">你有没有问题？</div><div class="ex-py">Nǐ yǒu méiyǒu wèntí?</div><div class="ex-en">Do you have questions? (affirmative-negative form)</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>NEVER say 不有. Always use 没有 to negate 有. In speech, 没有 can be shortened to just 没: 我没钱 (I have no money).</span></div>
+</div>
+
+<!-- GP 1.2 Standard negation with 不 -->
+<div class="gp" id="gp1-2">
+  <div class="gp-num">1.2</div>
+  <div class="gp-title">Standard Negation with "bu" — 不 + Verb / Adj.</div>
+  <div class="gp-hero"><div class="gp-cn">不</div><div class="gp-py">bù / bú</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">不 + Verb / Adjective</span></div>
+  <p class="gp-exp">不 (bù) is the standard negation word in Chinese, placed directly before a verb or adjective. Its tone changes to 2nd tone (bú) before a 4th-tone syllable. It covers most present/future negation. The one exception is 有 (have), which uses 没 instead.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">他们不是坏孩子。</div><div class="ex-py">Tāmen bú shì huài háizi.</div><div class="ex-en">They are not bad children.</div></div>
+    <div class="ex-card"><div class="ex-cn">我不喝酒。</div><div class="ex-py">Wǒ bù hē jiǔ.</div><div class="ex-en">I don't drink alcohol.</div></div>
+    <div class="ex-card"><div class="ex-cn">今天不冷。</div><div class="ex-py">Jīntiān bù lěng.</div><div class="ex-en">Today is not cold.</div></div>
+    <div class="ex-card"><div class="ex-cn">她不去。</div><div class="ex-py">Tā bù qù.</div><div class="ex-en">She is not going.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Tone rule: 不 is 4th tone (bù) by default, but becomes 2nd tone (bú) before another 4th-tone syllable: 不是 (bú shì), 不去 (bú qù).</span></div>
+</div>
+
+<!-- GP 1.3 都 -->
+<div class="gp" id="gp1-3">
+  <div class="gp-num">1.3</div>
+  <div class="gp-title">The "All" Adverb "dou" — 都 + Verb / Adj.</div>
+  <div class="gp-hero"><div class="gp-cn">都</div><div class="gp-py">dōu</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Plural Subject + 都 + Verb / Adj.</span></div>
+  <p class="gp-exp">都 (dōu) means "all" or "both" and always refers back to a plural subject. It must come before the verb or adjective, never at the end. When combined with 不, 都不 means "none of them" while 不都 means "not all of them."</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我们都住在上海。</div><div class="ex-py">Wǒmen dōu zhù zài Shànghǎi.</div><div class="ex-en">We all live in Shanghai.</div></div>
+    <div class="ex-card"><div class="ex-cn">他们都是学生。</div><div class="ex-py">Tāmen dōu shì xuésheng.</div><div class="ex-en">They are all students.</div></div>
+    <div class="ex-card"><div class="ex-cn">我和他都喜欢音乐。</div><div class="ex-py">Wǒ hé tā dōu xǐhuān yīnyuè.</div><div class="ex-en">Both he and I like music.</div></div>
+    <div class="ex-card"><div class="ex-cn">这些菜都很好吃。</div><div class="ex-py">Zhèxiē cài dōu hěn hǎochī.</div><div class="ex-en">All these dishes are delicious.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>都不 = none of them (e.g. 他们都不去 — none of them are going). 不都 = not all of them (some go, some don't).</span></div>
+</div>
+
+<!-- GP 1.4 也 -->
+<div class="gp" id="gp1-4">
+  <div class="gp-num">1.4</div>
+  <div class="gp-title">The "Also" Adverb "ye" — 也 + Verb / Adj.</div>
+  <div class="gp-hero"><div class="gp-cn">也</div><div class="gp-py">yě</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 也 + Verb / Adj.</span></div>
+  <p class="gp-exp">也 (yě) means "also" or "too" and is placed before the verb or adjective — never at the end of the sentence like English "too." It must come after the subject and before the predicate.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">昨天很冷，今天也很冷。</div><div class="ex-py">Zuótiān hěn lěng, jīntiān yě hěn lěng.</div><div class="ex-en">Yesterday was cold; today is also cold.</div></div>
+    <div class="ex-card"><div class="ex-cn">我也是学生。</div><div class="ex-py">Wǒ yě shì xuésheng.</div><div class="ex-en">I am also a student.</div></div>
+    <div class="ex-card"><div class="ex-cn">他也去。</div><div class="ex-py">Tā yě qù.</div><div class="ex-en">He is going too.</div></div>
+    <div class="ex-card"><div class="ex-cn">她也很高。</div><div class="ex-py">Tā yě hěn gāo.</div><div class="ex-en">She is also very tall.</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>也 must come BEFORE the verb. "我学中文也" is incorrect. The correct form is "我也学中文."</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 2 · CONJUNCTIONS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch2" data-cn="连">
+  <div class="ch-num">Chapter 2 · Conjunctions</div>
+  <div class="ch-title">Conjunctions</div>
+  <div class="ch-sub">Connecting words and ideas</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 2.1 和 -->
+<div class="gp" id="gp2-1">
+  <div class="gp-num">2.1</div>
+  <div class="gp-title">Expressing "And" with "he" — Noun 1 + 和 + Noun 2</div>
+  <div class="gp-hero"><div class="gp-cn">和</div><div class="gp-py">hé</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Noun 1 + 和 + Noun 2</span></div>
+  <p class="gp-exp">和 (hé) connects nouns or pronouns, meaning "and." It is only used to link nouns — not verbs or clauses. For connecting actions in sequence, use 然后 (ránhòu, "then/afterwards") instead.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我和他都不去。</div><div class="ex-py">Wǒ hé tā dōu bù qù.</div><div class="ex-en">He and I are both not going.</div></div>
+    <div class="ex-card"><div class="ex-cn">茶和咖啡</div><div class="ex-py">chá hé kāfēi</div><div class="ex-en">tea and coffee</div></div>
+    <div class="ex-card"><div class="ex-cn">妈妈和爸爸</div><div class="ex-py">māma hé bàba</div><div class="ex-en">mom and dad</div></div>
+    <div class="ex-card"><div class="ex-cn">中文和英文都很难。</div><div class="ex-py">Zhōngwén hé Yīngwén dōu hěn nán.</div><div class="ex-en">Both Chinese and English are difficult.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>和 only connects NOUNS. To link actions: 我去学校，然后学习 (I go to school, then study). Don't use 和 between verbs.</span></div>
+</div>
+
+<!-- GP 2.2 还是 -->
+<div class="gp" id="gp2-2">
+  <div class="gp-num">2.2</div>
+  <div class="gp-title">Offering Choices with "haishi" — A + 还是 + B?</div>
+  <div class="gp-hero"><div class="gp-cn">还是</div><div class="gp-py">háishi</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">A + 还是 + B ?</span></div>
+  <p class="gp-exp">还是 (háishi) means "or" in questions that offer a choice between two options. It is only used in questions. In statements (non-questions), the word for "or" is 或者 (huòzhě). Do not mix them up.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">你要喝茶还是咖啡？</div><div class="ex-py">Nǐ yào hē chá háishi kāfēi?</div><div class="ex-en">Do you want tea or coffee?</div></div>
+    <div class="ex-card"><div class="ex-cn">你是学生还是老师？</div><div class="ex-py">Nǐ shì xuésheng háishi lǎoshī?</div><div class="ex-en">Are you a student or a teacher?</div></div>
+    <div class="ex-card"><div class="ex-cn">你去还是不去？</div><div class="ex-py">Nǐ qù háishi bù qù?</div><div class="ex-en">Are you going or not?</div></div>
+    <div class="ex-card"><div class="ex-cn">你喜欢猫还是狗？</div><div class="ex-py">Nǐ xǐhuān māo háishi gǒu?</div><div class="ex-en">Do you like cats or dogs?</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>还是 = "or" in QUESTIONS. 或者 = "or" in STATEMENTS. Wrong: 你可以喝茶还是咖啡 (statement). Right: 你可以喝茶或者咖啡.</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 3 · NUMBERS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch3" data-cn="数">
+  <div class="ch-num">Chapter 3 · Numbers</div>
+  <div class="ch-title">Numbers, Time &amp; Dates</div>
+  <div class="ch-sub">Counting, telling time, and expressing dates</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 3.1 Age with 岁 -->
+<div class="gp" id="gp3-1">
+  <div class="gp-num">3.1</div>
+  <div class="gp-title">Age with "sui" — Subj. + Number + 岁</div>
+  <div class="gp-hero"><div class="gp-cn">岁</div><div class="gp-py">suì</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + Number + 岁 (+ 了)</span></div>
+  <p class="gp-exp">To state someone's age, simply place the number before 岁. No verb like 是 is needed — 岁 acts as its own predicate. To ask age: use 几岁? (jǐ suì?) for young children and 多大? (duō dà?) for adults and teens.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我20岁。</div><div class="ex-py">Wǒ èrshí suì.</div><div class="ex-en">I am 20 years old.</div></div>
+    <div class="ex-card"><div class="ex-cn">他三岁。</div><div class="ex-py">Tā sān suì.</div><div class="ex-en">He is three years old.</div></div>
+    <div class="ex-card"><div class="ex-cn">你多大？</div><div class="ex-py">Nǐ duō dà?</div><div class="ex-en">How old are you? (to an adult)</div></div>
+    <div class="ex-card"><div class="ex-cn">她今年三十岁了。</div><div class="ex-py">Tā jīnnián sānshí suì le.</div><div class="ex-en">She is turning 30 this year.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Ask children: 你几岁? Ask adults/teens: 你多大? The 了 at the end of age sentences signals a new state — she is now 30.</span></div>
+</div>
+
+<!-- GP 3.2 Measure word 个 -->
+<div class="gp" id="gp3-2">
+  <div class="gp-num">3.2</div>
+  <div class="gp-title">Measure Word "ge" — Number + 个 + Noun</div>
+  <div class="gp-hero"><div class="gp-cn">个</div><div class="gp-py">gè</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Number + 个 + Noun</span></div>
+  <p class="gp-exp">Chinese requires a measure word between a number and a noun — you cannot say "three person" directly. 个 (gè) is the most versatile and most commonly used measure word, suitable for people and many objects when you're unsure which specific measure word to use.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">一个人</div><div class="ex-py">yī gè rén</div><div class="ex-en">one person</div></div>
+    <div class="ex-card"><div class="ex-cn">两个学生</div><div class="ex-py">liǎng gè xuésheng</div><div class="ex-en">two students</div></div>
+    <div class="ex-card"><div class="ex-cn">三个问题</div><div class="ex-py">sān gè wèntí</div><div class="ex-en">three questions</div></div>
+    <div class="ex-card"><div class="ex-cn">这个苹果很甜。</div><div class="ex-py">Zhège píngguǒ hěn tián.</div><div class="ex-en">This apple is very sweet.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Other common measure words: 本 (běn, books), 张 (zhāng, flat things), 杯 (bēi, cups), 只 (zhī, small animals), 件 (jiàn, clothing). When unsure, 个 usually works.</span></div>
+</div>
+
+<!-- GP 3.3 Structure of dates -->
+<div class="gp" id="gp3-3">
+  <div class="gp-num">3.3</div>
+  <div class="gp-title">Structure of Dates — Number + 年 + Number + 月 + Number + 日</div>
+  <div class="gp-hero"><div class="gp-cn">年 月 日／号</div><div class="gp-py">nián, yuè, rì / hào</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Year + 年 + Month + 月 + Day + 日/号</span></div>
+  <p class="gp-exp">Dates in Chinese go from largest to smallest: year → month → day. This is the opposite of English (month/day/year). 日 (rì) is formal; 号 (hào) is the everyday spoken form for the day of the month. The year is always read digit by digit.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">今天是2011年11月11日。</div><div class="ex-py">Jīntiān shì èr líng yī yī nián shíyī yuè shíyī hào.</div><div class="ex-en">Today is November 11, 2011.</div></div>
+    <div class="ex-card"><div class="ex-cn">我的生日是三月五号。</div><div class="ex-py">Wǒ de shēngrì shì sān yuè wǔ hào.</div><div class="ex-en">My birthday is March 5th.</div></div>
+    <div class="ex-card"><div class="ex-cn">今天几号？</div><div class="ex-py">Jīntiān jǐ hào?</div><div class="ex-en">What is today's date?</div></div>
+    <div class="ex-card"><div class="ex-cn">现在几月？</div><div class="ex-py">Xiànzài jǐ yuè?</div><div class="ex-en">What month is it now?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Months: 一月 (January) through 十二月 (December). Years are read digit by digit: 2025 = 二零二五年 (èr líng èr wǔ nián).</span></div>
+</div>
+
+<!-- GP 3.4 Days of the week -->
+<div class="gp" id="gp3-4">
+  <div class="gp-num">3.4</div>
+  <div class="gp-title">Structure of Days of the Week — 星期 + Number</div>
+  <div class="gp-hero"><div class="gp-cn">星期</div><div class="gp-py">xīngqī</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">星期 + Number (1–6) / 天 or 日</span></div>
+  <p class="gp-exp">Days of the week are formed by adding a number to 星期 (xīngqī). Monday is 星期一 (1), through Saturday 星期六 (6). Sunday is the exception: 星期天 or 星期日. To ask what day it is: 今天星期几？</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">今天星期三。</div><div class="ex-py">Jīntiān xīngqīsān.</div><div class="ex-en">Today is Wednesday.</div></div>
+    <div class="ex-card"><div class="ex-cn">星期一 / 星期二 / 星期三</div><div class="ex-py">xīngqīyī / xīngqīèr / xīngqīsān</div><div class="ex-en">Monday / Tuesday / Wednesday</div></div>
+    <div class="ex-card"><div class="ex-cn">星期四 / 星期五 / 星期六</div><div class="ex-py">xīngqīsì / xīngqīwǔ / xīngqīliù</div><div class="ex-en">Thursday / Friday / Saturday</div></div>
+    <div class="ex-card"><div class="ex-cn">星期天 / 星期日</div><div class="ex-py">xīngqītiān / xīngqīrì</div><div class="ex-en">Sunday</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>周 (zhōu) is an alternative to 星期: 周一, 周二… 周日. Both are correct and equally common. 周 is slightly more formal/written.</span></div>
+</div>
+
+<!-- GP 3.5 Structure of numbers -->
+<div class="gp" id="gp3-5">
+  <div class="gp-num">3.5</div>
+  <div class="gp-title">Structure of Numbers — Number + Unit</div>
+  <div class="gp-hero"><div class="gp-cn">百 千 万</div><div class="gp-py">bǎi, qiān, wàn</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Number + Unit (百/千/万)</span></div>
+  <p class="gp-exp">Chinese numbers are very logical. Units: 十 (10), 百 (100), 千 (1,000), 万 (10,000). Numbers are formed by combining these units. Note: Chinese has a special unit 万 for 10,000 — there is no single word for 10,000 in English, but Chinese uses it constantly.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">三百五十九</div><div class="ex-py">sān bǎi wǔshíjiǔ</div><div class="ex-en">359</div></div>
+    <div class="ex-card"><div class="ex-cn">一千零八十</div><div class="ex-py">yī qiān líng bāshí</div><div class="ex-en">1,080 (零 fills gaps)</div></div>
+    <div class="ex-card"><div class="ex-cn">两万五千</div><div class="ex-py">liǎng wàn wǔqiān</div><div class="ex-en">25,000</div></div>
+    <div class="ex-card"><div class="ex-cn">一百万</div><div class="ex-py">yī bǎi wàn</div><div class="ex-en">1,000,000 (one million)</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Use 零 (líng) when there is a zero in the middle of a number: 一百零五 (105). The zero is spoken but a leading zero is omitted: 1,005 = 一千零五.</span></div>
+</div>
+
+<!-- GP 3.6 Structure of times -->
+<div class="gp" id="gp3-6">
+  <div class="gp-num">3.6</div>
+  <div class="gp-title">Structure of Times (Basic) — Number + 点(钟)</div>
+  <div class="gp-hero"><div class="gp-cn">点 分</div><div class="gp-py">diǎn, fēn</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Number + 点(钟) (+ Number + 分)</span></div>
+  <p class="gp-exp">To tell the time, use the hour number + 点 (diǎn). Add minutes with 分 (fēn). 半 (bàn) means "half past." 钟 (zhōng) is optional after the hour alone. To ask the time: 现在几点？(What time is it now?)</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">现在十一点。</div><div class="ex-py">Xiànzài shíyī diǎn.</div><div class="ex-en">It is now 11 o'clock.</div></div>
+    <div class="ex-card"><div class="ex-cn">三点半</div><div class="ex-py">sān diǎn bàn</div><div class="ex-en">3:30 (half past three)</div></div>
+    <div class="ex-card"><div class="ex-cn">八点十五分</div><div class="ex-py">bā diǎn shíwǔ fēn</div><div class="ex-en">8:15</div></div>
+    <div class="ex-card"><div class="ex-cn">你几点来？</div><div class="ex-py">Nǐ jǐ diǎn lái?</div><div class="ex-en">What time are you coming?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>AM/PM: 上午 (shàngwǔ) = morning, 下午 (xiàwǔ) = afternoon, 晚上 (wǎnshang) = evening. Place before the time: 下午三点 (3 PM).</span></div>
+</div>
+
+<!-- GP 3.7 二 vs 两 -->
+<div class="gp" id="gp3-7">
+  <div class="gp-num">3.7</div>
+  <div class="gp-title">Comparing "er" and "liang" — 二 vs 两</div>
+  <div class="gp-hero"><div class="gp-cn">二 vs 两</div><div class="gp-py">èr vs liǎng</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">两 + Measure Word + Noun &nbsp;|&nbsp; 二 + Unit (十/百…)</span></div>
+  <p class="gp-exp">Both 二 and 两 mean "two," but they are used in different contexts. 两 is used before measure words and units of measurement. 二 is used in sequences (numbers, floors, bus routes) and in numbers like 12, 20, 22. This is one of the most common beginner mistakes.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">两个人</div><div class="ex-py">liǎng gè rén</div><div class="ex-en">two people (两 before measure word)</div></div>
+    <div class="ex-card"><div class="ex-cn">二十二</div><div class="ex-py">èrshíèr</div><div class="ex-en">22 (二 in sequences)</div></div>
+    <div class="ex-card"><div class="ex-cn">两本书</div><div class="ex-py">liǎng běn shū</div><div class="ex-en">two books (两 before measure word)</div></div>
+    <div class="ex-card"><div class="ex-cn">第二 / 二楼</div><div class="ex-py">dì èr / èr lóu</div><div class="ex-en">second / second floor (序数 uses 二)</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>Before measure words → always 两: 两个 ✓, 二个 ✗. In compound numbers → 二: 十二 (12), 二十 (20). Two hundred = 两百 OR 二百 (both OK).</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 4 · PARTICLES
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch4" data-cn="词">
+  <div class="ch-num">Chapter 4 · Particles</div>
+  <div class="ch-title">Particles</div>
+  <div class="ch-sub">Small words that carry big grammatical meaning</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 4.1 Close possession without 的 -->
+<div class="gp" id="gp4-1">
+  <div class="gp-num">4.1</div>
+  <div class="gp-title">Expressing Close Possession without "de" — Pronoun + Noun</div>
+  <div class="gp-hero"><div class="gp-cn">我女朋友</div><div class="gp-py">wǒ nǚpéngyou</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Pronoun + Noun (no 的)</span></div>
+  <p class="gp-exp">When showing possession of people in close personal relationships — family members, romantic partners, close friends — 的 (de) is usually dropped. Including 的 in these cases sounds overly formal or creates emotional distance.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我女朋友</div><div class="ex-py">wǒ nǚpéngyou</div><div class="ex-en">my girlfriend</div></div>
+    <div class="ex-card"><div class="ex-cn">我妈妈</div><div class="ex-py">wǒ māma</div><div class="ex-en">my mom</div></div>
+    <div class="ex-card"><div class="ex-cn">我朋友</div><div class="ex-py">wǒ péngyou</div><div class="ex-en">my friend</div></div>
+    <div class="ex-card"><div class="ex-cn">他哥哥</div><div class="ex-py">tā gēge</div><div class="ex-en">his older brother</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>For things (not people), keep 的: 我的书 (my book), 我的手机 (my phone). Drop 的 mainly for close personal relationships.</span></div>
+</div>
+
+<!-- GP 4.2 Possession with 的 -->
+<div class="gp" id="gp4-2">
+  <div class="gp-num">4.2</div>
+  <div class="gp-title">Expressing Possession with "de" — Noun 1 + 的 + Noun 2</div>
+  <div class="gp-hero"><div class="gp-cn">的</div><div class="gp-py">de</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Possessor + 的 + Thing possessed</span></div>
+  <p class="gp-exp">的 (de) is the possessive particle in Chinese, equivalent to 's or "of" in English. It comes between the possessor and what is possessed. It also links a modifier to a noun (e.g. adjective + 的 + noun).</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我的老师</div><div class="ex-py">wǒ de lǎoshī</div><div class="ex-en">my teacher</div></div>
+    <div class="ex-card"><div class="ex-cn">他的名字</div><div class="ex-py">tā de míngzi</div><div class="ex-en">his name</div></div>
+    <div class="ex-card"><div class="ex-cn">中国的文化</div><div class="ex-py">Zhōngguó de wénhuà</div><div class="ex-en">China's culture</div></div>
+    <div class="ex-card"><div class="ex-cn">这是我的。</div><div class="ex-py">Zhè shì wǒ de.</div><div class="ex-en">This is mine.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>的 can stand alone at the end of a sentence to replace the noun: 这是我的 (This is mine). The noun is implied from context.</span></div>
+</div>
+
+<!-- GP 4.3 Questions with 呢 -->
+<div class="gp" id="gp4-3">
+  <div class="gp-num">4.3</div>
+  <div class="gp-title">Questions with "ne" — ……呢？</div>
+  <div class="gp-hero"><div class="gp-cn">呢</div><div class="gp-py">ne</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Statement. + Noun/Pronoun + 呢？</span></div>
+  <p class="gp-exp">呢 (ne) is added after a noun or pronoun to ask "And what about…?" It echoes the previous question or topic back, creating natural conversation flow without needing to repeat the full question.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我很好。你呢？</div><div class="ex-py">Wǒ hěn hǎo. Nǐ ne?</div><div class="ex-en">I'm fine. And you?</div></div>
+    <div class="ex-card"><div class="ex-cn">他去了，她呢？</div><div class="ex-py">Tā qù le, tā ne?</div><div class="ex-en">He went; what about her?</div></div>
+    <div class="ex-card"><div class="ex-cn">我喜欢，你呢？</div><div class="ex-py">Wǒ xǐhuān, nǐ ne?</div><div class="ex-en">I like it; what about you?</div></div>
+    <div class="ex-card"><div class="ex-cn">这个我知道，那个呢？</div><div class="ex-py">Zhège wǒ zhīdào, nàge ne?</div><div class="ex-en">I know this one; what about that one?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>呢 mid-sentence can also indicate ongoing action: 他在睡觉呢 (He is sleeping right now). Context makes clear which usage applies.</span></div>
+</div>
+
+<!-- GP 4.4 Suggestions with 吧 -->
+<div class="gp" id="gp4-4">
+  <div class="gp-num">4.4</div>
+  <div class="gp-title">Suggestions with "ba" — Command + 吧</div>
+  <div class="gp-hero"><div class="gp-cn">吧</div><div class="gp-py">ba</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Statement / Command + 吧</span></div>
+  <p class="gp-exp">吧 (ba) softens a command into a suggestion, expresses an assumption, or seeks confirmation. It makes the tone relaxed and friendly. It can mean "Let's…", "Right?", or "I assume…" depending on context.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我们走吧。</div><div class="ex-py">Wǒmen zǒu ba.</div><div class="ex-en">Let's go.</div></div>
+    <div class="ex-card"><div class="ex-cn">你累了吧？</div><div class="ex-py">Nǐ lèi le ba?</div><div class="ex-en">You must be tired, right?</div></div>
+    <div class="ex-card"><div class="ex-cn">喝点水吧。</div><div class="ex-py">Hē diǎn shuǐ ba.</div><div class="ex-en">Have some water.</div></div>
+    <div class="ex-card"><div class="ex-cn">是这样吧？</div><div class="ex-py">Shì zhèyàng ba?</div><div class="ex-en">It's like this, right?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>吧 turns any statement into a gentle suggestion or soft assumption. It always softens the tone — never adds aggression or urgency.</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 5 · VERBS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch5" data-cn="动">
+  <div class="ch-num">Chapter 5 · Verbs</div>
+  <div class="ch-title">Verbs</div>
+  <div class="ch-sub">Actions, states, and existence</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 5.1 在 existence in a place -->
+<div class="gp" id="gp5-1">
+  <div class="gp-num">5.1</div>
+  <div class="gp-title">Expressing Existence in a Place with "zai" — 在 + Place</div>
+  <div class="gp-hero"><div class="gp-cn">在</div><div class="gp-py">zài</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 在 + Place</span></div>
+  <p class="gp-exp">在 (zài) as a verb means "to be at/in/on (a location)." It expresses where someone or something is located. It can also be used as a preposition before an action verb to indicate where an action takes place.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">老师在上海。</div><div class="ex-py">Lǎoshī zài Shànghǎi.</div><div class="ex-en">The teacher is in Shanghai.</div></div>
+    <div class="ex-card"><div class="ex-cn">我在家。</div><div class="ex-py">Wǒ zài jiā.</div><div class="ex-en">I am at home.</div></div>
+    <div class="ex-card"><div class="ex-cn">书在桌子上。</div><div class="ex-py">Shū zài zhuōzi shàng.</div><div class="ex-en">The book is on the table.</div></div>
+    <div class="ex-card"><div class="ex-cn">你在哪里？</div><div class="ex-py">Nǐ zài nǎlǐ?</div><div class="ex-en">Where are you?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Location words: 上 (on), 下 (under), 里 (inside), 旁边 (beside), 前面 (in front), 后面 (behind), 左边 (left), 右边 (right).</span></div>
+</div>
+
+<!-- GP 5.2 有 existence -->
+<div class="gp" id="gp5-2">
+  <div class="gp-num">5.2</div>
+  <div class="gp-title">Expressing Existence with "you" — Place + 有 + Obj.</div>
+  <div class="gp-hero"><div class="gp-cn">有</div><div class="gp-py">yǒu</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Place + 有 + Object</span></div>
+  <p class="gp-exp">有 (yǒu) can express existence, equivalent to "there is/are." In this usage, the sentence starts with a place and ends with the thing that exists there. This is different from the possessive use of 有 (GP 5.3), where the subject is a person.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我们学校有很多学生。</div><div class="ex-py">Wǒmen xuéxiào yǒu hěn duō xuésheng.</div><div class="ex-en">Our school has a lot of students. / There are many students at our school.</div></div>
+    <div class="ex-card"><div class="ex-cn">这里有一家咖啡店。</div><div class="ex-py">Zhèlǐ yǒu yī jiā kāfēidiàn.</div><div class="ex-en">There is a coffee shop here.</div></div>
+    <div class="ex-card"><div class="ex-cn">附近有没有银行？</div><div class="ex-py">Fùjìn yǒu méiyǒu yínháng?</div><div class="ex-en">Is there a bank nearby?</div></div>
+    <div class="ex-card"><div class="ex-cn">冰箱里有什么？</div><div class="ex-py">Bīngxiāng lǐ yǒu shénme?</div><div class="ex-en">What is in the fridge?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Existence structure: Place + 有 + Thing. Possession structure: Person + 有 + Thing. The verb 有 is the same; the subject tells you which meaning applies.</span></div>
+</div>
+
+<!-- GP 5.3 有 possession -->
+<div class="gp" id="gp5-3">
+  <div class="gp-num">5.3</div>
+  <div class="gp-title">Expressing Possession with "you" — Subj. + 有 + Obj.</div>
+  <div class="gp-hero"><div class="gp-cn">有</div><div class="gp-py">yǒu</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 有 + Object</span></div>
+  <p class="gp-exp">有 (yǒu) means "to have" when the subject is a person or entity possessing something. Negate with 没有 (méiyǒu) — never 不有. This is one of the most frequently used verbs in Mandarin.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我有钱。</div><div class="ex-py">Wǒ yǒu qián.</div><div class="ex-en">I have money.</div></div>
+    <div class="ex-card"><div class="ex-cn">他有一个哥哥。</div><div class="ex-py">Tā yǒu yī gè gēge.</div><div class="ex-en">He has an older brother.</div></div>
+    <div class="ex-card"><div class="ex-cn">你有问题吗？</div><div class="ex-py">Nǐ yǒu wèntí ma?</div><div class="ex-en">Do you have questions?</div></div>
+    <div class="ex-card"><div class="ex-cn">我没有时间。</div><div class="ex-py">Wǒ méiyǒu shíjiān.</div><div class="ex-en">I don't have time.</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>NEVER say 不有. Negate 有 with 没有 only. In speech, 没有 → 没: 我没钱 (I have no money).</span></div>
+</div>
+
+<!-- GP 5.4 叫 -->
+<div class="gp" id="gp5-4">
+  <div class="gp-num">5.4</div>
+  <div class="gp-title">Using the Verb "jiao" — 叫 + Name</div>
+  <div class="gp-hero"><div class="gp-cn">叫</div><div class="gp-py">jiào</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 叫 + Name / Noun</span></div>
+  <p class="gp-exp">叫 (jiào) means "to be called" or "to call." The most common use for beginners is to introduce your name: 我叫… (My name is… / I am called…). It is more casual than 我的名字是 (My name is). Ask with 你叫什么名字？</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">你叫什么名字？</div><div class="ex-py">Nǐ jiào shénme míngzi?</div><div class="ex-en">What is your name?</div></div>
+    <div class="ex-card"><div class="ex-cn">我叫李明。</div><div class="ex-py">Wǒ jiào Lǐ Míng.</div><div class="ex-en">My name is Li Ming.</div></div>
+    <div class="ex-card"><div class="ex-cn">她叫什么？</div><div class="ex-py">Tā jiào shénme?</div><div class="ex-en">What is her name?</div></div>
+    <div class="ex-card"><div class="ex-cn">这个叫饺子。</div><div class="ex-py">Zhège jiào jiǎozi.</div><div class="ex-en">This is called dumplings.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>叫 also means "to call/shout": 你叫他来 (Call him to come). Context makes clear which meaning is intended.</span></div>
+</div>
+
+<!-- GP 5.5 去 -->
+<div class="gp" id="gp5-5">
+  <div class="gp-num">5.5</div>
+  <div class="gp-title">Using the Verb "qu" — 去 + Place</div>
+  <div class="gp-hero"><div class="gp-cn">去</div><div class="gp-py">qù</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 去 + Place / Verb</span></div>
+  <p class="gp-exp">去 (qù) means "to go" (away from the speaker's current location). It can be followed directly by a place, or by another verb phrase to mean "go to do something." It is one of the highest-frequency verbs in Mandarin.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我去学校。</div><div class="ex-py">Wǒ qù xuéxiào.</div><div class="ex-en">I go to school.</div></div>
+    <div class="ex-card"><div class="ex-cn">你去哪儿？</div><div class="ex-py">Nǐ qù nǎr?</div><div class="ex-en">Where are you going?</div></div>
+    <div class="ex-card"><div class="ex-cn">我要去吃饭，你去吗？</div><div class="ex-py">Wǒ yào qù chīfàn, nǐ qù ma?</div><div class="ex-en">I'm going to eat; are you coming?</div></div>
+    <div class="ex-card"><div class="ex-cn">她去超市买东西。</div><div class="ex-py">Tā qù chāoshì mǎi dōngxi.</div><div class="ex-en">She goes to the supermarket to buy things.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>去 + Verb = go to do something: 去吃饭 (go eat), 去买东西 (go shopping), 去看朋友 (go see a friend). Very natural and common structure.</span></div>
+</div>
+
+<!-- GP 5.6 姓 -->
+<div class="gp" id="gp5-6">
+  <div class="gp-num">5.6</div>
+  <div class="gp-title">Using the Verb "xing" — 姓 + Surname</div>
+  <div class="gp-hero"><div class="gp-cn">姓</div><div class="gp-py">xìng</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 姓 + Surname</span></div>
+  <p class="gp-exp">姓 (xìng) means "to have the family name of" or "my surname is." It is specifically used for family names (surnames), not full names. To ask someone's surname politely: 您贵姓？(What is your honorable surname?) or informally: 你姓什么？</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">你姓什么？</div><div class="ex-py">Nǐ xìng shénme?</div><div class="ex-en">What is your surname?</div></div>
+    <div class="ex-card"><div class="ex-cn">我姓王。</div><div class="ex-py">Wǒ xìng Wáng.</div><div class="ex-en">My surname is Wang.</div></div>
+    <div class="ex-card"><div class="ex-cn">他姓李。</div><div class="ex-py">Tā xìng Lǐ.</div><div class="ex-en">His surname is Li.</div></div>
+    <div class="ex-card"><div class="ex-cn">您贵姓？</div><div class="ex-py">Nín guì xìng?</div><div class="ex-en">What is your honorable surname? (formal/polite)</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>姓 is for surnames only. Use 叫 for full names: 我叫王明 (My name is Wang Ming). In China, surnames come first: 王 (family name) 明 (given name).</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 6 · AUXILIARY VERBS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch6" data-cn="助">
+  <div class="ch-num">Chapter 6 · Auxiliary Verbs</div>
+  <div class="ch-title">Auxiliary Verbs</div>
+  <div class="ch-sub">Modal verbs that modify the main verb</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 6.1 能 -->
+<div class="gp" id="gp6-1">
+  <div class="gp-num">6.1</div>
+  <div class="gp-title">Expressing Ability or Possibility with "neng" — 能 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">能</div><div class="gp-py">néng</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 能 + Verb</span></div>
+  <p class="gp-exp">能 (néng) expresses physical ability or situational possibility — whether someone is able to do something given circumstances. It is different from 会 (learned skill) and 可以 (permission). Negate with 不能.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">中文这么难，你能学好吗？</div><div class="ex-py">Zhōngwén zhème nán, nǐ néng xué hǎo ma?</div><div class="ex-en">Chinese is so hard — are you able to learn it well?</div></div>
+    <div class="ex-card"><div class="ex-cn">我今天不能来。</div><div class="ex-py">Wǒ jīntiān bù néng lái.</div><div class="ex-en">I can't come today (circumstances prevent it).</div></div>
+    <div class="ex-card"><div class="ex-cn">这里不能抽烟。</div><div class="ex-py">Zhèlǐ bù néng chōuyān.</div><div class="ex-en">You cannot smoke here.</div></div>
+    <div class="ex-card"><div class="ex-cn">你能帮我吗？</div><div class="ex-py">Nǐ néng bāng wǒ ma?</div><div class="ex-en">Are you able to help me?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>能 (circumstances) vs 会 (learned skill) vs 可以 (permission). "Can you speak Chinese?" — 你会说中文吗? (learned skill) / 你能说中文吗? (are you able to right now?)</span></div>
+</div>
+
+<!-- GP 6.2 会 -->
+<div class="gp" id="gp6-2">
+  <div class="gp-num">6.2</div>
+  <div class="gp-title">Expressing a Learned Skill with "hui" — 会 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">会</div><div class="gp-py">huì</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 会 + Verb</span></div>
+  <p class="gp-exp">会 (huì) expresses a skill that was learned through study or practice — "can" in the sense of "know how to." It is the correct choice when talking about language ability, sports, musical instruments, and other acquired skills. Negate with 不会.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">他会说中文。</div><div class="ex-py">Tā huì shuō Zhōngwén.</div><div class="ex-en">He can speak Chinese. (learned skill)</div></div>
+    <div class="ex-card"><div class="ex-cn">我会游泳。</div><div class="ex-py">Wǒ huì yóuyǒng.</div><div class="ex-en">I can swim. (know how to)</div></div>
+    <div class="ex-card"><div class="ex-cn">你会开车吗？</div><div class="ex-py">Nǐ huì kāi chē ma?</div><div class="ex-en">Can you drive? (do you know how?)</div></div>
+    <div class="ex-card"><div class="ex-cn">我不会弹钢琴。</div><div class="ex-py">Wǒ bù huì tán gāngqín.</div><div class="ex-en">I can't play the piano. (never learned)</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Use 会 for skills you've learned: languages, sports, instruments, cooking. Use 能 for what you're physically or situationally able to do right now.</span></div>
+</div>
+
+<!-- GP 6.3 要 be going to -->
+<div class="gp" id="gp6-3">
+  <div class="gp-num">6.3</div>
+  <div class="gp-title">Expressing "Be Going to" with "yao" — Subj. + 要 + Verb (+ 了)</div>
+  <div class="gp-hero"><div class="gp-cn">要……了</div><div class="gp-py">yào … le</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 要 + Verb (+ 了)</span></div>
+  <p class="gp-exp">要 (yào) with 了 at the end expresses that something is about to happen — "is going to" or "will soon." The 了 signals an imminent change of state. Without 了, 要 simply means "want to" (see GP 6.5).</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我要去吃饭，你去吗？</div><div class="ex-py">Wǒ yào qù chīfàn, nǐ qù ma?</div><div class="ex-en">I'm going to go eat — are you coming?</div></div>
+    <div class="ex-card"><div class="ex-cn">快要下雨了。</div><div class="ex-py">Kuài yào xià yǔ le.</div><div class="ex-en">It's about to rain.</div></div>
+    <div class="ex-card"><div class="ex-cn">他要来了。</div><div class="ex-py">Tā yào lái le.</div><div class="ex-en">He is about to arrive.</div></div>
+    <div class="ex-card"><div class="ex-cn">我们要出发了。</div><div class="ex-py">Wǒmen yào chūfā le.</div><div class="ex-en">We are about to set off.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>快要…了 (kuài yào…le) = "about to / on the verge of": 快要下课了 (Class is about to end). 快 adds the sense of "very soon."</span></div>
+</div>
+
+<!-- GP 6.4 可以 -->
+<div class="gp" id="gp6-4">
+  <div class="gp-num">6.4</div>
+  <div class="gp-title">Expressing Permission with "keyi" — 可以 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">可以</div><div class="gp-py">kěyǐ</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 可以 + Verb</span></div>
+  <p class="gp-exp">可以 (kěyǐ) expresses permission — "may" or "is allowed to." It is the most polite way to ask for or grant permission. To deny permission, use 不可以 or 不能. 可以 is also commonly used to make polite requests.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">这里可以吸烟吗？</div><div class="ex-py">Zhèlǐ kěyǐ xīyān ma?</div><div class="ex-en">Is smoking allowed here?</div></div>
+    <div class="ex-card"><div class="ex-cn">你可以进来。</div><div class="ex-py">Nǐ kěyǐ jìnlái.</div><div class="ex-en">You may come in.</div></div>
+    <div class="ex-card"><div class="ex-cn">我可以问一个问题吗？</div><div class="ex-py">Wǒ kěyǐ wèn yī gè wèntí ma?</div><div class="ex-en">May I ask a question?</div></div>
+    <div class="ex-card"><div class="ex-cn">这里不可以拍照。</div><div class="ex-py">Zhèlǐ bù kěyǐ pāizhào.</div><div class="ex-en">Photography is not allowed here.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>可以 (permission) vs 能 (ability/circumstance): 我可以用你的手机吗？(May I use your phone? — permission) vs 你能听到吗？(Can you hear? — ability)</span></div>
+</div>
+
+<!-- GP 6.5 要 wanting to do -->
+<div class="gp" id="gp6-5">
+  <div class="gp-num">6.5</div>
+  <div class="gp-title">Wanting to Do Something with "yao" — 要 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">要</div><div class="gp-py">yào</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 要 + Verb</span></div>
+  <p class="gp-exp">要 (yào) without 了 expresses a strong desire or intention to do something — "want to" or "need to." It is stronger and more definite than 想 (which is softer: "would like to"). 要 can also be used to order something (at a restaurant, shop).</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我要吃饭。</div><div class="ex-py">Wǒ yào chīfàn.</div><div class="ex-en">I want to eat.</div></div>
+    <div class="ex-card"><div class="ex-cn">我要一杯咖啡。</div><div class="ex-py">Wǒ yào yī bēi kāfēi.</div><div class="ex-en">I want a cup of coffee.</div></div>
+    <div class="ex-card"><div class="ex-cn">他要去北京。</div><div class="ex-py">Tā yào qù Běijīng.</div><div class="ex-en">He wants to go to Beijing.</div></div>
+    <div class="ex-card"><div class="ex-cn">你要什么？</div><div class="ex-py">Nǐ yào shénme?</div><div class="ex-en">What do you want?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>想 (xiǎng) = "would like to" (softer, polite). 要 (yào) = "want/will" (stronger, more determined). In a restaurant: 我要... is the standard way to order.</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 7 · VERB PHRASES
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch7" data-cn="短">
+  <div class="ch-num">Chapter 7 · Verb Phrases</div>
+  <div class="ch-title">Verb Phrases</div>
+  <div class="ch-sub">Multi-word expressions built around verbs</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 7.1 怎么 -->
+<div class="gp" id="gp7-1">
+  <div class="gp-num">7.1</div>
+  <div class="gp-title">How to Do Something with "zenme" — 怎么 + Verb?</div>
+  <div class="gp-hero"><div class="gp-cn">怎么</div><div class="gp-py">zěnme</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">怎么 + Verb?</span></div>
+  <p class="gp-exp">怎么 (zěnme) means "how" and is placed directly before the verb it modifies. Unlike English, the question word stays in the position where the answer goes — it does not move to the front. 怎么 asks about the manner or method of doing something.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">怎么走？</div><div class="ex-py">Zěnme zǒu?</div><div class="ex-en">How do you get there? / Which way?</div></div>
+    <div class="ex-card"><div class="ex-cn">这个字怎么写？</div><div class="ex-py">Zhège zì zěnme xiě?</div><div class="ex-en">How do you write this character?</div></div>
+    <div class="ex-card"><div class="ex-cn">这个怎么说？</div><div class="ex-py">Zhège zěnme shuō?</div><div class="ex-en">How do you say this?</div></div>
+    <div class="ex-card"><div class="ex-cn">你怎么去学校？</div><div class="ex-py">Nǐ zěnme qù xuéxiào?</div><div class="ex-en">How do you go to school?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>怎么 (how — manner) vs 怎么样 (zěnmeyàng — how is it? / how about it?). 你怎么样？means "How are you?" / "How's it going?"</span></div>
+</div>
+
+<!-- GP 7.2 没有 negate past actions -->
+<div class="gp" id="gp7-2">
+  <div class="gp-num">7.2</div>
+  <div class="gp-title">Negation of Past Actions with "meiyou" — 没有 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">没有</div><div class="gp-py">méiyǒu</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + 没有 + Verb</span></div>
+  <p class="gp-exp">To negate a past action (something that did not happen), use 没有 before the verb. Do not use 不 for past negation of actions. 没有 indicates the action was not completed or did not occur. It can be shortened to 没 in casual speech.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我没有去酒吧。</div><div class="ex-py">Wǒ méiyǒu qù jiǔbā.</div><div class="ex-en">I didn't go to the bar.</div></div>
+    <div class="ex-card"><div class="ex-cn">他没有来。</div><div class="ex-py">Tā méiyǒu lái.</div><div class="ex-en">He didn't come.</div></div>
+    <div class="ex-card"><div class="ex-cn">我没有吃早饭。</div><div class="ex-py">Wǒ méiyǒu chī zǎofàn.</div><div class="ex-en">I didn't eat breakfast.</div></div>
+    <div class="ex-card"><div class="ex-cn">你去了吗？没有。</div><div class="ex-py">Nǐ qù le ma? Méiyǒu.</div><div class="ex-en">Did you go? No (I didn't).</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>Past negation: 没有 + Verb ✓ &nbsp; 不 + Verb ✗ (for past). "我不去了" means "I'm no longer going" (present change), not "I didn't go."</span></div>
+</div>
+
+<!-- GP 7.3 不要 -->
+<div class="gp" id="gp7-3">
+  <div class="gp-num">7.3</div>
+  <div class="gp-title">Negative Commands with "buyao" — 不要 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">不要</div><div class="gp-py">bù yào</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">不要 + Verb</span></div>
+  <p class="gp-exp">不要 (bù yào) or its shortened form 别 (bié) is used to give negative commands — telling someone "don't" do something. 别 is more casual and common in speech. Both come directly before the verb with no subject needed (imperative).</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">不要说英文！</div><div class="ex-py">Bù yào shuō Yīngwén!</div><div class="ex-en">Don't speak English!</div></div>
+    <div class="ex-card"><div class="ex-cn">别说话！</div><div class="ex-py">Bié shuōhuà!</div><div class="ex-en">Don't talk! (casual)</div></div>
+    <div class="ex-card"><div class="ex-cn">不要担心。</div><div class="ex-py">Bù yào dānxīn.</div><div class="ex-en">Don't worry.</div></div>
+    <div class="ex-card"><div class="ex-cn">别忘了！</div><div class="ex-py">Bié wàng le!</div><div class="ex-en">Don't forget!</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>不要 and 别 are interchangeable in most cases. 别 is more spoken/casual. Signs and formal notices tend to use 不要 or 请勿 (qǐng wù — please do not).</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 8 · GRAMMATICAL STRUCTURES: BASICS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch8" data-cn="句">
+  <div class="ch-num">Chapter 8 · Grammatical Structures: Basics</div>
+  <div class="ch-title">Basic Grammatical Structures</div>
+  <div class="ch-sub">Core sentence patterns that underpin all of Mandarin</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 8.1 Basic sentence order -->
+<div class="gp" id="gp8-1">
+  <div class="gp-num">8.1</div>
+  <div class="gp-title">Basic Sentence Order — Subj. + Verb (+ Obj.)</div>
+  <div class="gp-hero"><div class="gp-cn">主 + 谓 + 宾</div><div class="gp-py">zhǔ + wèi + bīn</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Subject + Verb (+ Object)</span></div>
+  <p class="gp-exp">Chinese follows Subject-Verb-Object (SVO) order like English. However, time and place expressions come before the verb (not after), and adverbs also go before the verb. The object can be omitted when clear from context.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我爱你。</div><div class="ex-py">Wǒ ài nǐ.</div><div class="ex-en">I love you. (S + V + O)</div></div>
+    <div class="ex-card"><div class="ex-cn">我明天去北京。</div><div class="ex-py">Wǒ míngtiān qù Běijīng.</div><div class="ex-en">I am going to Beijing tomorrow. (time before verb)</div></div>
+    <div class="ex-card"><div class="ex-cn">他在家吃饭。</div><div class="ex-py">Tā zài jiā chīfàn.</div><div class="ex-en">He eats at home. (place before verb)</div></div>
+    <div class="ex-card"><div class="ex-cn">我每天学习。</div><div class="ex-py">Wǒ měitiān xuéxí.</div><div class="ex-en">I study every day.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>Key difference from English: time words (今天, 明天, 每天) go BEFORE the verb in Chinese, not after. "I go tomorrow" → 我明天去, not 我去明天.</span></div>
+</div>
+
+<!-- GP 8.2 是 connecting nouns -->
+<div class="gp" id="gp8-2">
+  <div class="gp-num">8.2</div>
+  <div class="gp-title">Connecting Nouns with "shi" — A + 是 + B</div>
+  <div class="gp-hero"><div class="gp-cn">是</div><div class="gp-py">shì</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">A + 是 + B</span></div>
+  <p class="gp-exp">是 (shì) links two nouns or noun phrases — "A is B." It equates or identifies the subject. It is never used before adjectives (use 很 instead). Negated with 不是 (bú shì). Questions: add 吗 at the end, or use the 是不是 form.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我是学生。</div><div class="ex-py">Wǒ shì xuésheng.</div><div class="ex-en">I am a student.</div></div>
+    <div class="ex-card"><div class="ex-cn">他是我的老师。</div><div class="ex-py">Tā shì wǒ de lǎoshī.</div><div class="ex-en">He is my teacher.</div></div>
+    <div class="ex-card"><div class="ex-cn">这是什么？</div><div class="ex-py">Zhè shì shénme?</div><div class="ex-en">What is this?</div></div>
+    <div class="ex-card"><div class="ex-cn">他不是老板。</div><div class="ex-py">Tā bú shì lǎobǎn.</div><div class="ex-en">He is not the boss.</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>是 = noun-to-noun link. NEVER before adjectives: 我是累 ✗ → 我很累 ✓. 他是高 ✗ → 他很高 ✓.</span></div>
+</div>
+
+<!-- GP 8.3 太…了 -->
+<div class="gp" id="gp8-3">
+  <div class="gp-num">8.3</div>
+  <div class="gp-title">Expressing "Excessively" with "tai" — 太 + Adj. + 了</div>
+  <div class="gp-hero"><div class="gp-cn">太……了</div><div class="gp-py">tài … le</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">太 + Adjective + 了</span></div>
+  <p class="gp-exp">太 (tài) means "too" or "excessively." It always pairs with 了 at the end of the sentence. Together they mean "too [adjective]" or can be used positively as an exclamation: 太好了！(Great! / Excellent!). The 了 is required — do not omit it.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">太好了！</div><div class="ex-py">Tài hǎo le!</div><div class="ex-en">Excellent! / Great! / Too good!</div></div>
+    <div class="ex-card"><div class="ex-cn">这个太贵了。</div><div class="ex-py">Zhège tài guì le.</div><div class="ex-en">This is too expensive.</div></div>
+    <div class="ex-card"><div class="ex-cn">今天太热了！</div><div class="ex-py">Jīntiān tài rè le!</div><div class="ex-en">Today is too hot!</div></div>
+    <div class="ex-card"><div class="ex-cn">你说得太快了。</div><div class="ex-py">Nǐ shuō de tài kuài le.</div><div class="ex-en">You speak too fast.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>太好了！is one of the most common Chinese exclamations, meaning "Great!" or "Wonderful!" — used very positively, not just "too good." Context determines whether it's a complaint or a compliment.</span></div>
+</div>
+
+<!-- GP 8.4 Simple noun + adjective sentences -->
+<div class="gp" id="gp8-4">
+  <div class="gp-num">8.4</div>
+  <div class="gp-title">Simple "Noun + Adjective" Sentences — Noun + 很 + Adj.</div>
+  <div class="gp-hero"><div class="gp-cn">我很好。</div><div class="gp-py">Wǒ hěn hǎo.</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Noun + 很 + Adjective</span></div>
+  <p class="gp-exp">In Chinese, adjectives can function as predicates directly — no "to be" verb (是) is needed. 很 (hěn, "very") is placed before the adjective. When unstressed in normal speech, 很 does not actually mean "very" — it is a linking device. Without 很, a bare adjective implies comparison.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">我很好。</div><div class="ex-py">Wǒ hěn hǎo.</div><div class="ex-en">I am (very) good / fine.</div></div>
+    <div class="ex-card"><div class="ex-cn">她很漂亮。</div><div class="ex-py">Tā hěn piàoliang.</div><div class="ex-en">She is (very) pretty.</div></div>
+    <div class="ex-card"><div class="ex-cn">今天很冷。</div><div class="ex-py">Jīntiān hěn lěng.</div><div class="ex-en">Today is (very) cold.</div></div>
+    <div class="ex-card"><div class="ex-cn">这个菜很好吃。</div><div class="ex-py">Zhège cài hěn hǎochī.</div><div class="ex-en">This dish is (very) delicious.</div></div>
+  </div>
+  <div class="note"><span class="ni">⚠️</span><span>A bare adjective without 很 implies comparison: 她漂亮 sounds like "She is prettier (than someone)." Always include 很 for neutral, non-comparative statements.</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     CHAPTER 9 · QUESTION FORMS
+══════════════════════════════════════ -->
+<div class="ch-hd" id="ch9" data-cn="问">
+  <div class="ch-num">Chapter 9 · Question Forms</div>
+  <div class="ch-title">Question Forms</div>
+  <div class="ch-sub">All the ways to ask questions in Mandarin</div>
+  <div class="ch-line"></div>
+</div>
+
+<!-- GP 9.1 Affirmative-negative -->
+<div class="gp" id="gp9-1">
+  <div class="gp-num">9.1</div>
+  <div class="gp-title">Affirmative-Negative Question — Verb + 不 + Verb</div>
+  <div class="gp-hero"><div class="gp-cn">去不去？好不好？</div><div class="gp-py">qù bù qù? hǎo bù hǎo?</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Verb + 不 + Verb &nbsp;|&nbsp; Adj. + 不 + Adj.</span></div>
+  <p class="gp-exp">This form repeats the verb (or adjective) with 不 sandwiched in between, offering an affirmative-negative choice. It is a natural, casual way to ask yes/no questions and is equivalent to adding 吗 but often more conversational.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">去不去？</div><div class="ex-py">Qù bù qù?</div><div class="ex-en">Going or not?</div></div>
+    <div class="ex-card"><div class="ex-cn">好不好？</div><div class="ex-py">Hǎo bù hǎo?</div><div class="ex-en">Good or not? / Is that OK?</div></div>
+    <div class="ex-card"><div class="ex-cn">你是不是学生？</div><div class="ex-py">Nǐ shì bú shì xuésheng?</div><div class="ex-en">Are you a student or not?</div></div>
+    <div class="ex-card"><div class="ex-cn">你吃不吃肉？</div><div class="ex-py">Nǐ chī bù chī ròu?</div><div class="ex-en">Do you eat meat or not?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>For longer verbs, only the first syllable may be repeated: 喜不喜欢？(Do you like it?), 认不认识？(Do you know them?). This is very natural in speech.</span></div>
+</div>
+
+<!-- GP 9.2 Placement of question words -->
+<div class="gp" id="gp9-2">
+  <div class="gp-num">9.2</div>
+  <div class="gp-title">Placement of Question Words — In Situ</div>
+  <div class="gp-hero"><div class="gp-cn">什么 谁 哪儿 为什么 怎么</div><div class="gp-py">shénme, shéi, nǎr, wèishénme, zěnme</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Question word stays in the position of the answer</span></div>
+  <p class="gp-exp">Chinese question words (who, what, where, when, why, how) do NOT move to the beginning of the sentence like in English. They stay exactly where the answer would appear. No 吗 is added when a question word is present.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">你是谁？</div><div class="ex-py">Nǐ shì shéi?</div><div class="ex-en">Who are you? (谁 where the name would go)</div></div>
+    <div class="ex-card"><div class="ex-cn">你在哪儿？</div><div class="ex-py">Nǐ zài nǎr?</div><div class="ex-en">Where are you? (哪儿 where the place would go)</div></div>
+    <div class="ex-card"><div class="ex-cn">你要什么？</div><div class="ex-py">Nǐ yào shénme?</div><div class="ex-en">What do you want? (什么 where the object would go)</div></div>
+    <div class="ex-card"><div class="ex-cn">你为什么学中文？</div><div class="ex-py">Nǐ wèishénme xué Zhōngwén?</div><div class="ex-en">Why do you study Chinese?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>All question words: 什么 (what), 谁 (who), 哪里/哪儿 (where), 什么时候 (when), 为什么 (why), 怎么 (how), 多少/几 (how many/much).</span></div>
+</div>
+
+<!-- GP 9.3 Tag questions with 不 -->
+<div class="gp" id="gp9-3">
+  <div class="gp-num">9.3</div>
+  <div class="gp-title">Tag Questions with "bu" — ……是不是 / 对不对 / 好不好?</div>
+  <div class="gp-hero"><div class="gp-cn">是不是 对不对 好不好</div><div class="gp-py">shì bú shì, duì bú duì, hǎo bù hǎo</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Statement + 是不是 / 对不对 / 好不好?</span></div>
+  <p class="gp-exp">Chinese tag questions using 不 are formed by appending a short affirmative-negative phrase at the end of a statement. Common tags: 是不是 (right or not?), 对不对 (correct or not?), 好不好 (good or not? — used to seek agreement).</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">你们明天来，好不好？</div><div class="ex-py">Nǐmen míngtiān lái, hǎo bù hǎo?</div><div class="ex-en">You're coming tomorrow, OK?</div></div>
+    <div class="ex-card"><div class="ex-cn">他是老师，对不对？</div><div class="ex-py">Tā shì lǎoshī, duì bú duì?</div><div class="ex-en">He's a teacher, right?</div></div>
+    <div class="ex-card"><div class="ex-cn">这样做，是不是？</div><div class="ex-py">Zhèyàng zuò, shì bú shì?</div><div class="ex-en">Do it this way, right?</div></div>
+    <div class="ex-card"><div class="ex-cn">我们先吃，好不好？</div><div class="ex-py">Wǒmen xiān chī, hǎo bù hǎo?</div><div class="ex-en">Let's eat first, OK?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>好不好？at the end of a suggestion is like "How about it?" or "Deal?" — very commonly used to seek agreement on a proposal or plan.</span></div>
+</div>
+
+<!-- GP 9.4 Tag questions with 吗 -->
+<div class="gp" id="gp9-4">
+  <div class="gp-num">9.4</div>
+  <div class="gp-title">Tag Questions with "ma" — ……是吗 / 对吗 / 好吗?</div>
+  <div class="gp-hero"><div class="gp-cn">是吗 对吗 好吗</div><div class="gp-py">shì ma, duì ma, hǎo ma</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Statement + 是吗 / 对吗 / 好吗?</span></div>
+  <p class="gp-exp">Tag questions with 吗 are formed by adding 是吗, 对吗, or 好吗 after a statement. They are similar to English "right?", "is that so?", or "OK?" They seek confirmation but are slightly softer than the 不 form. 是吗 can also express surprise: "Oh really?"</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">这样做，对吗？</div><div class="ex-py">Zhèyàng zuò, duì ma?</div><div class="ex-en">Doing it this way is correct, right?</div></div>
+    <div class="ex-card"><div class="ex-cn">你是老师，是吗？</div><div class="ex-py">Nǐ shì lǎoshī, shì ma?</div><div class="ex-en">You're a teacher, right?</div></div>
+    <div class="ex-card"><div class="ex-cn">他赢了？是吗！</div><div class="ex-py">Tā yíng le? Shì ma!</div><div class="ex-en">He won? Oh really!</div></div>
+    <div class="ex-card"><div class="ex-cn">我们明天见，好吗？</div><div class="ex-py">Wǒmen míngtiān jiàn, hǎo ma?</div><div class="ex-en">We'll meet tomorrow, OK?</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>是吗 (shì ma) has a double function: tag question ("right?") AND expression of surprise/disbelief ("Oh really? Is that so?"). Tone of voice distinguishes them.</span></div>
+</div>
+
+<!-- GP 9.5 Yes/No questions with 吗 -->
+<div class="gp" id="gp9-5">
+  <div class="gp-num">9.5</div>
+  <div class="gp-title">Yes-No Questions with "ma" — ……吗？</div>
+  <div class="gp-hero"><div class="gp-cn">……吗？</div><div class="gp-py">… ma?</div></div>
+  <div class="formula"><span class="formula-lbl">Pattern</span><span class="formula-txt">Statement + 吗？</span></div>
+  <p class="gp-exp">The simplest way to form a yes/no question: add 吗 to any statement. Word order does not change — unlike English, there is no subject-verb inversion. To answer "yes," repeat the verb. To answer "no," use 不/没有 + verb.</p>
+  <div class="ex-lbl">Examples</div>
+  <div class="ex-grid">
+    <div class="ex-card"><div class="ex-cn">他是老板吗？</div><div class="ex-py">Tā shì lǎobǎn ma?</div><div class="ex-en">Is he the boss?</div></div>
+    <div class="ex-card"><div class="ex-cn">你喜欢中国菜吗？</div><div class="ex-py">Nǐ xǐhuān Zhōngguó cài ma?</div><div class="ex-en">Do you like Chinese food?</div></div>
+    <div class="ex-card"><div class="ex-cn">你有时间吗？</div><div class="ex-py">Nǐ yǒu shíjiān ma?</div><div class="ex-en">Do you have time?</div></div>
+    <div class="ex-card"><div class="ex-cn">你去吗？去。/ 不去。</div><div class="ex-py">Nǐ qù ma? Qù. / Bù qù.</div><div class="ex-en">Are you going? Yes. / No.</div></div>
+  </div>
+  <div class="note"><span class="ni">💡</span><span>To answer "yes": repeat the verb (去, 是, 有). To answer "no": 不 + verb or 没有 + verb. Never say 是 alone as "yes" in Chinese — it sounds unnatural for most questions.</span></div>
+</div>
+
+<!-- ══════════════════════════════════════
+     QUICK REFERENCE
+══════════════════════════════════════ -->
+<div class="ref-sec" id="reference">
+  <div class="ref-title">Quick Reference</div>
+  <div class="ref-sub">All 40 A1 grammar points at a glance</div>
+  <table class="ref">
+    <thead>
+      <tr><th>#</th><th>Chinese</th><th>Pinyin</th><th>Pattern</th><th>Meaning / Use</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1.1</td><td class="td-cn">没有</td><td class="td-py">méiyǒu</td><td>没 + 有</td><td>Negation of 有 (don't have)</td></tr>
+      <tr><td>1.2</td><td class="td-cn">不</td><td class="td-py">bù / bú</td><td>不 + Verb/Adj</td><td>Standard negation</td></tr>
+      <tr><td>1.3</td><td class="td-cn">都</td><td class="td-py">dōu</td><td>都 + Verb/Adj</td><td>"All" adverb</td></tr>
+      <tr><td>1.4</td><td class="td-cn">也</td><td class="td-py">yě</td><td>也 + Verb/Adj</td><td>"Also/too" adverb</td></tr>
+      <tr><td>2.1</td><td class="td-cn">和</td><td class="td-py">hé</td><td>N1 + 和 + N2</td><td>Connecting nouns with "and"</td></tr>
+      <tr><td>2.2</td><td class="td-cn">还是</td><td class="td-py">háishi</td><td>A + 还是 + B?</td><td>Offering choices — "or" in questions</td></tr>
+      <tr><td>3.1</td><td class="td-cn">岁</td><td class="td-py">suì</td><td>Subj. + Number + 岁</td><td>Expressing age</td></tr>
+      <tr><td>3.2</td><td class="td-cn">个</td><td class="td-py">gè</td><td>Number + 个 + Noun</td><td>General measure word</td></tr>
+      <tr><td>3.3</td><td class="td-cn">年月日</td><td class="td-py">nián yuè rì</td><td>年 + 月 + 日/号</td><td>Structure of dates</td></tr>
+      <tr><td>3.4</td><td class="td-cn">星期</td><td class="td-py">xīngqī</td><td>星期 + 1–6 / 天</td><td>Days of the week</td></tr>
+      <tr><td>3.5</td><td class="td-cn">百千万</td><td class="td-py">bǎi qiān wàn</td><td>Number + Unit</td><td>Structure of numbers</td></tr>
+      <tr><td>3.6</td><td class="td-cn">点 分</td><td class="td-py">diǎn fēn</td><td>Number + 点(钟)</td><td>Structure of times</td></tr>
+      <tr><td>3.7</td><td class="td-cn">二 vs 两</td><td class="td-py">èr vs liǎng</td><td>两 + MW / 二 + unit</td><td>Comparing 二 and 两</td></tr>
+      <tr><td>4.1</td><td class="td-cn">我妈妈</td><td class="td-py">wǒ māma</td><td>Pronoun + Noun</td><td>Close possession without 的</td></tr>
+      <tr><td>4.2</td><td class="td-cn">的</td><td class="td-py">de</td><td>N1 + 的 + N2</td><td>Expressing possession</td></tr>
+      <tr><td>4.3</td><td class="td-cn">呢</td><td class="td-py">ne</td><td>……呢？</td><td>Echo questions "And you?"</td></tr>
+      <tr><td>4.4</td><td class="td-cn">吧</td><td class="td-py">ba</td><td>Command + 吧</td><td>Suggestions / assumptions</td></tr>
+      <tr><td>5.1</td><td class="td-cn">在</td><td class="td-py">zài</td><td>在 + Place</td><td>Existence in a place</td></tr>
+      <tr><td>5.2</td><td class="td-cn">有 (存在)</td><td class="td-py">yǒu</td><td>Place + 有 + Obj.</td><td>Existence ("there is/are")</td></tr>
+      <tr><td>5.3</td><td class="td-cn">有 (拥有)</td><td class="td-py">yǒu</td><td>Subj. + 有 + Obj.</td><td>Possession ("to have")</td></tr>
+      <tr><td>5.4</td><td class="td-cn">叫</td><td class="td-py">jiào</td><td>叫 + Name</td><td>Using the verb 叫 (to be called)</td></tr>
+      <tr><td>5.5</td><td class="td-cn">去</td><td class="td-py">qù</td><td>去 + Place</td><td>Using the verb 去 (to go)</td></tr>
+      <tr><td>5.6</td><td class="td-cn">姓</td><td class="td-py">xìng</td><td>姓 + Surname</td><td>Using the verb 姓 (surname is)</td></tr>
+      <tr><td>6.1</td><td class="td-cn">能</td><td class="td-py">néng</td><td>能 + Verb</td><td>Ability / possibility</td></tr>
+      <tr><td>6.2</td><td class="td-cn">会</td><td class="td-py">huì</td><td>会 + Verb</td><td>Learned skill</td></tr>
+      <tr><td>6.3</td><td class="td-cn">要……了</td><td class="td-py">yào…le</td><td>要 + Verb + 了</td><td>"Be going to" / about to</td></tr>
+      <tr><td>6.4</td><td class="td-cn">可以</td><td class="td-py">kěyǐ</td><td>可以 + Verb</td><td>Permission — may / allowed to</td></tr>
+      <tr><td>6.5</td><td class="td-cn">要</td><td class="td-py">yào</td><td>要 + Verb</td><td>Wanting to do something</td></tr>
+      <tr><td>7.1</td><td class="td-cn">怎么</td><td class="td-py">zěnme</td><td>怎么 + Verb</td><td>How to do something</td></tr>
+      <tr><td>7.2</td><td class="td-cn">没有</td><td class="td-py">méiyǒu</td><td>没有 + Verb</td><td>Negation of past actions</td></tr>
+      <tr><td>7.3</td><td class="td-cn">不要 / 别</td><td class="td-py">bù yào / bié</td><td>不要 + Verb</td><td>Negative commands — "don't"</td></tr>
+      <tr><td>8.1</td><td class="td-cn">SVO</td><td class="td-py">S+V+O</td><td>Subj. + Verb + Obj.</td><td>Basic sentence order</td></tr>
+      <tr><td>8.2</td><td class="td-cn">是</td><td class="td-py">shì</td><td>A + 是 + B</td><td>Connecting nouns ("to be")</td></tr>
+      <tr><td>8.3</td><td class="td-cn">太……了</td><td class="td-py">tài…le</td><td>太 + Adj. + 了</td><td>Excessively / "too" + adj.</td></tr>
+      <tr><td>8.4</td><td class="td-cn">很</td><td class="td-py">hěn</td><td>Noun + 很 + Adj.</td><td>Simple adjective predicate sentences</td></tr>
+      <tr><td>9.1</td><td class="td-cn">V不V</td><td class="td-py">V bù V</td><td>Verb + 不 + Verb</td><td>Affirmative-negative question</td></tr>
+      <tr><td>9.2</td><td class="td-cn">什么 谁 哪儿…</td><td class="td-py">shénme, shéi…</td><td>In situ placement</td><td>Placement of question words</td></tr>
+      <tr><td>9.3</td><td class="td-cn">是不是 对不对</td><td class="td-py">shì bú shì…</td><td>Statement + 是不是?</td><td>Tag questions with 不</td></tr>
+      <tr><td>9.4</td><td class="td-cn">是吗 对吗</td><td class="td-py">shì ma…</td><td>Statement + 是吗?</td><td>Tag questions with 吗</td></tr>
+      <tr><td>9.5</td><td class="td-cn">……吗？</td><td class="td-py">…ma?</td><td>Statement + 吗?</td><td>Yes/No questions</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- BACK -->
+<div class="back">
+  <h2>恭喜！Congratulations!</h2>
+  <p>You have now studied all 40 official A1-level Mandarin grammar points from the Chinese Grammar Wiki. You have the foundation — keep practising every day!</p>
+  <p style="font-size:.8rem;color:rgba(255,255,255,.35);margin-top:1.5rem;">Based on A1 grammar points · resources.allsetlearning.com/chinese/grammar</p>
+</div>
+
+</main>
+
+<button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+const prog=document.getElementById('prog');
+const stbtn=document.getElementById('stbtn');
+window.addEventListener('scroll',()=>{
+  const pct=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight);
+  prog.style.transform='scaleX('+pct+')';
+  stbtn.classList.toggle('show',window.scrollY>400);
+});
+const navPts=document.querySelectorAll('.nav-pt');
+const secs=document.querySelectorAll('.gp[id]');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      navPts.forEach(n=>{n.style.color='';n.style.borderLeftColor='';});
+      const id=e.target.id;
+      navPts.forEach(n=>{
+        if(n.getAttribute('onclick')===`goTo('${id}')`){
+          n.style.color='#fff';n.style.borderLeftColor='#C0392B';
+        }
+      });
+    }
+  });
+},{threshold:0.4});
+secs.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
