@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes">
 <title>A1 Chinese Grammar Essentials – All 40 Points</title>
 <style>
 :root {
@@ -102,11 +102,75 @@ table.ref td{padding:.58rem 1rem;border-bottom:1px solid var(--border);vertical-
 .prog{position:fixed;top:0;left:280px;right:0;height:3px;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:200;}
 .stbtn{position:fixed;bottom:1.8rem;right:1.8rem;width:40px;height:40px;background:var(--red);color:var(--white);border:none;border-radius:50%;font-size:1rem;cursor:pointer;opacity:0;transition:opacity .3s;z-index:300;display:flex;align-items:center;justify-content:center;}
 .stbtn.show{opacity:1;}
-@media(max-width:800px){.sb{display:none;}.main{margin-left:0;}.prog{left:0;}.gp,.ch-hd{padding:1.5rem;}}
+/* HAMBURGER BUTTON */
+.menu-btn{display:none;position:fixed;top:.75rem;left:.75rem;z-index:400;background:var(--red);color:#fff;border:none;border-radius:8px;width:44px;height:44px;font-size:1.3rem;cursor:pointer;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.3);}
+
+/* OVERLAY */
+.sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:99;}
+.sb-overlay.open{display:block;}
+
+@media(max-width:800px){
+  .menu-btn{display:flex;}
+  .sb{transform:translateX(-100%);transition:transform .28s ease;box-shadow:none;}
+  .sb.open{transform:translateX(0);box-shadow:6px 0 28px rgba(0,0,0,.45);}
+  .main{margin-left:0;}
+  .prog{left:0;}
+  
+  /* Cover */
+  .cover{padding:5rem 1.25rem 3rem;min-height:auto;}
+  .cover h1{font-size:clamp(2rem,8vw,3.2rem);}
+  .cover-cn{font-size:1.7rem;}
+  .cover-stats{gap:1.5rem;flex-wrap:wrap;justify-content:center;}
+  .cover-stat strong{font-size:1.5rem;}
+  .cover::before{font-size:14rem;right:-1rem;bottom:-2rem;}
+  
+  /* Chapter headers */
+  .ch-hd{padding:1.5rem 1.25rem;}
+  .ch-title{font-size:1.5rem;}
+  .ch-hd::after{font-size:4rem;}
+  
+  /* Grammar points */
+  .gp{padding:1.5rem 1.25rem;}
+  .gp-cn{font-size:1.6rem;}
+  .gp-title{font-size:1.2rem;}
+  
+  /* Section dividers */
+  .sec-div{padding:.5rem 1.25rem;}
+  
+  /* Formula */
+  .formula{flex-direction:column;align-items:flex-start;gap:.35rem;}
+  
+  /* Reference table — scroll horizontally */
+  .ref-sec{padding:1.5rem 1rem;}
+  table.ref{font-size:.8rem;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  table.ref thead th,table.ref td{padding:.55rem .75rem;}
+  .td-cn{font-size:1.1rem;}
+  
+  /* Back section */
+  .back{padding:2.5rem 1.25rem;}
+  
+  /* Scroll-to-top button — keep away from edge */
+  .stbtn{bottom:1.2rem;right:1.2rem;}
+  
+  /* Larger tap targets for nav */
+  .nav-pt{padding:.45rem 1.3rem .45rem 2rem;font-size:.82rem;}
+  .nav-ch{padding:.7rem 1.3rem;font-size:.74rem;}
+}
+
+@media(max-width:400px){
+  .cover h1{font-size:1.9rem;}
+  .gp-cn{font-size:1.4rem;}
+  .cover-stats{gap:1rem;}
+}
 </style>
 </head>
 <body>
 <div class="prog" id="prog"></div>
+
+<!-- MOBILE MENU BUTTON -->
+<button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+<!-- SIDEBAR OVERLAY -->
+<div class="sb-overlay" id="sbOverlay"></div>
 
 <!-- ══════════ SIDEBAR ══════════ -->
 <nav class="sb">
@@ -1054,9 +1118,29 @@ table.ref td{padding:.58rem 1rem;border-bottom:1px solid var(--border);vertical-
 <button class="stbtn" id="stbtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
-function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+function goTo(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth'});
+  // close sidebar on mobile after navigation
+  sb.classList.remove('open');
+  overlay.classList.remove('open');
+}
 const prog=document.getElementById('prog');
 const stbtn=document.getElementById('stbtn');
+const sb=document.querySelector('.sb');
+const menuBtn=document.getElementById('menuBtn');
+const overlay=document.getElementById('sbOverlay');
+
+menuBtn.addEventListener('click',()=>{
+  sb.classList.toggle('open');
+  overlay.classList.toggle('open');
+  menuBtn.textContent=sb.classList.contains('open')? '✕' : '☰';
+});
+overlay.addEventListener('click',()=>{
+  sb.classList.remove('open');
+  overlay.classList.remove('open');
+  menuBtn.textContent='☰';
+});
 window.addEventListener('scroll',()=>{
   const pct=window.scrollY/(document.documentElement.scrollHeight-window.innerHeight);
   prog.style.transform='scaleX('+pct+')';
